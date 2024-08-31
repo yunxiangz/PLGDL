@@ -19,12 +19,12 @@ import numpy as np
 import xgboost as xgb
 def read_type(types):
     validList = []
-    sheet = pd.read_excel("../data/antigen_zxd.xlsx", "pos")
+    sheet = pd.read_excel("../data/antigen.xlsx", "pos")
     for row in sheet.index.values:
         type = sheet.iloc[row, 3]
         if type in types and sheet.iloc[row, 0] not in validList:
             validList.append(sheet.iloc[row, 0])
-    sheet = pd.read_excel("../data/antigen_zxd.xlsx", "neg")
+    sheet = pd.read_excel("../data/antigen.xlsx", "neg")
     for row in sheet.index.values:
         type = sheet.iloc[row, 3]
         if type in types and sheet.iloc[row, 0] not in validList:

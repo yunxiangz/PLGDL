@@ -1,11 +1,11 @@
 import torch
 
-from enzymeCommissionZyxVal import EnzymeCommissionZyxVal
+from enzymeCommissionOurVal import EnzymeCommissionZyxVal
 
 print(torch.__version__)
 from torchdrug import transforms, tasks
 
-from enzymeCommissionZyx import EnzymeCommissionZyx
+from enzymeCommissionOur import EnzymeCommissionZyx
 
 from torchdrug import data
 from torchdrug import layers

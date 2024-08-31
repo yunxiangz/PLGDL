@@ -8,10 +8,10 @@ from sklearn.decomposition import PCA
 from torchdrug import layers
 from torchdrug.layers import geometry
 
-from MultipleBinaryCLassificationZyx import MultipleBinaryClassificationZyx
+from MultipleBinaryCLassificationOur import MultipleBinaryClassificationZyx
 from data import loaddata
 from torchdrug import core
-from engineZyx import EngineZyx
+from engineOur import EngineZyx
 
 [dataset,train_set, valid_set, test_set, pdbfiles] = loaddata("../protein-datasets/")
 
