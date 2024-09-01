@@ -1,10 +1,3 @@
-"""
-=============================
-LCEClassifier on Iris dataset
-=============================
-
-An example of :class:`lce.LCEClassifier`
-"""
 import math
 from sklearn.ensemble import RandomForestClassifier
 

@@ -1,11 +1,11 @@
 import torch
 
-from enzymeCommissionOurVal import EnzymeCommissionZyxVal
+from enzymeCommissionOurVal import EnzymeCommissionOurVal
 
 print(torch.__version__)
 from torchdrug import transforms, tasks
 
-from enzymeCommissionOur import EnzymeCommissionZyx
+from enzymeCommissionOur import EnzymeCommissionOur
 
 from torchdrug import data
 from torchdrug import layers
@@ -18,7 +18,7 @@ def loaddata(path):
     transform = transforms.Compose([truncate_transform, protein_view_transform])
 
     start_time = time.time()
-    dataset = EnzymeCommissionZyx(path, transform=transform, atom_feature=None,
+    dataset = EnzymeCommissionOur(path, transform=transform, atom_feature=None,
                                   bond_feature=None)
 
     end_time = time.time()
@@ -35,7 +35,7 @@ def loaddataVal():
     transform = transforms.Compose([truncate_transform, protein_view_transform])
 
     start_time = time.time()
-    dataset = EnzymeCommissionZyxVal("../owndata/", transform=transform, atom_feature=None,
+    dataset = EnzymeCommissionOurVal("../owndata/", transform=transform, atom_feature=None,
                                   bond_feature=None)
 
     end_time = time.time()

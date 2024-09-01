@@ -12,7 +12,7 @@ from torchdrug.core import Registry as R
 
 @R.register("datasets.EnzymeCommission")
 @utils.copy_args(data.ProteinDataset.load_pdbs)
-class EnzymeCommissionZyx(data.ProteinDataset):
+class EnzymeCommissionOur(data.ProteinDataset):
     """
     A set of proteins with their 3D structures and EC numbers, which describes their
     catalysis of biochemical reactions.

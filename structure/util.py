@@ -80,7 +80,7 @@ def load_config(cfg_file, context=None):
 def parse_args():
     parser = argparse.ArgumentParser()
     #parser.add_argument("-c", "--config", help="yaml configuration file", required=True)
-    parser.add_argument("-c", "--config", help="yaml configuration file", type=str, default="../config/pretrain/mc_esm_gearnet_zyx.yaml")
+    parser.add_argument("-c", "--config", help="yaml configuration file", type=str, default="../config/pretrain/mc_esm_gearnet_Our.yaml")
 
     parser.add_argument("-s", "--seed", help="random seed for PyTorch", type=int, default=1024)
 

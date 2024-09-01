@@ -1,5 +1,3 @@
-#https://github.com/facebookresearch/esm/blob/main/examples/sup_variant_prediction.ipynb
-
 '''
 To run the model :
 conda activate GENTRL

@@ -8,7 +8,7 @@ from torch.nn import functional as F
 from torchdrug import core, layers, tasks, metrics, utils
 from torchdrug.core import Registry as R
 from torchdrug.layers import functional
-class MultipleBinaryClassificationZyx(tasks.Task, core.Configurable):
+class MultipleBinaryClassificationOur(tasks.Task, core.Configurable):
     """
     Multiple binary classification task for graphs / molecules / proteins.
 
@@ -31,7 +31,7 @@ class MultipleBinaryClassificationZyx(tasks.Task, core.Configurable):
 
     def __init__(self, model, task=(), criterion="bce", metric=("auprc@micro", "f1_max"), num_mlp_layer=1,
                  normalization=True, reweight=False, graph_construction_model=None, verbose=0):
-        super(MultipleBinaryClassificationZyx, self).__init__()
+        super(MultipleBinaryClassificationOur, self).__init__()
         self.model = model
         self.task = task
         self.register_buffer("task_indices", torch.LongTensor(task))

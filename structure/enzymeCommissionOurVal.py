@@ -10,7 +10,7 @@ from torchdrug import data, utils
 from torchdrug.core import Registry as R
 
 
-class EnzymeCommissionZyxVal(data.ProteinDataset):
+class EnzymeCommissionOurVal(data.ProteinDataset):
     """
     A set of proteins with their 3D structures and EC numbers, which describes their
     catalysis of biochemical reactions.
