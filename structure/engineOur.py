@@ -17,7 +17,7 @@ module = sys.modules[__name__]
 logger = logging.getLogger(__name__)
 
 
-class EngineZyx(core.Configurable):
+class EngineOur(core.Configurable):
     """
     General class that handles everything about training and test of a task.
 
