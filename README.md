@@ -23,8 +23,3 @@ The code and datasets for the model PLGDL proposed in the paper: Leveraging Prot
 
 ### Expected output
 The test results (Accuracy, Precision, Recall, F1, MCC) in the test set. The results will be outputed on the Terminal.
-
-
-
-### Structure data
-The structure data predicted via Alphafold 3 can be downloaded via: https://pan.baidu.com/share/init?surl=id_OhsVustY2lVSVsE52HQ&pwd=89as
