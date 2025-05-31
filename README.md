@@ -22,4 +22,4 @@ The code and datasets for the model PLGDL proposed in the paper: Leveraging Prot
 
 
 ### Expected output
-The test results (Accuracy, Precision, Recall, F1, MCC) in the test set. The results will be outputed on the Terminal.
+The test results (Accuracy, Precision, Recall, F1, MCC, AUC-ROC, AUC-PR) in the test set. The results will be outputed on the Terminal.
