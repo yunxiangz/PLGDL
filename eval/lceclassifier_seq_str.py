@@ -19,19 +19,15 @@ from scipy.special import expit  # sigmoid 函数
 from sklearn.ensemble import RandomForestClassifier
 import argparse
 
-## Total kinds of methods
 REDUCES = {
     'CHOOSE_FEATURES':
         ['xgboost'],
     "COMPRESS_TEATURES":
         ['PCA'],
 }
-## 超参
+
 RANDOM_STATE = 42
-
 TEST_RADIO = 0.2
-
-
 params = {
     'objective': 'binary:logistic',
     'scale_pos_weight': 12,
@@ -42,7 +38,6 @@ params = {
     'learning_rate': 0.1,
     'random_state': RANDOM_STATE
 }
-
 
 MODEL_NAME = 'self_seq'
 MODEL_DIM = {
@@ -71,7 +66,7 @@ str_ft_path = os.path.join(str_ft_dir, 'COMPRESS_TEATURES', 'PCA.xlsx')
 print(f'seq_ft_path {seq_ft_path}')
 print(f'str_ft_path {str_ft_path}')
 
-RESULTS_DIR = os.path.join(seq_ft_dir, reduces_clf, method, f'test_{TEST_RADIO}')
+RESULTS_DIR = os.path.join(seq_ft_dir, reduces_clf, method, f'test_{TEST_RADIO}_okk')
 
 print('result dir ', RESULTS_DIR)
 if not os.path.exists(RESULTS_DIR):
@@ -120,13 +115,13 @@ print('test_label .shape ', test_labels.shape, test_labels)
 xgb_clf.fit(X_train, Y_train)
 
 # ==============test=========================================================
+print('=======================================test===================================')
 y_proba = xgb_clf.predict_proba(X_test)[:, 1]
 y_pred = xgb_clf.predict(X_test)
 
 test_ids = [NAMES[i] for i in idx_test]
 true_labels = Y_test
 
-# save DataFrame（建议）
 df_result = pd.DataFrame({
     'ID': test_ids,
     'TrueLabel': true_labels,
@@ -142,9 +137,9 @@ sys.stdout = output
 
 print('Accuracy: ', accuracy_score(Y_test, y_pred))
 print("F1-score:",
-      f1_score(Y_test, y_pred))  # Precision 和 Recall 的平衡，适合不均衡分类任务 2⋅Precision⋅Recall/(Precision+Recall)
-print("Recall:", recall_score(Y_test, y_pred))  # 预测正确的数据中，正样本预测正确的占比 TP/(TP+FN)
-print("Precision:", precision_score(Y_test, y_pred))  # 对所有正样本的预测中，预测正确的比例 TP/(TP+FP)
+      f1_score(Y_test, y_pred))
+print("Recall:", recall_score(Y_test, y_pred))
+print("Precision:", precision_score(Y_test, y_pred))
 print("AUC-ROC:", roc_auc_score(Y_test, y_proba))
 print("AUC-PR:", average_precision_score(Y_test, y_proba))
 print("MCC:", matthews_corrcoef(Y_test, y_pred))
