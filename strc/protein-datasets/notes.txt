@@ -1,1 +1,1 @@
-The PDB files for the proteins are too large to be uploaded.
+The PDB files for all the proteins are too large to be uploaded.
