@@ -16,9 +16,9 @@ The code and datasets for the model PLGDL proposed in the paper: Leveraging Prot
 ### Instructions
 1. Install the required packages in requirement.py: `pip install -r requirements.txt`. **Normal install time**: within 1 hour.
 2. To reproduce the results on our collected dataset:
-   - Run the evaluation through `python ./eval/lceclassifier_seq_str.py`. Expected runing time: within 1 min Nvidia A100.
+   - Run the evaluation through `python a_final_code-lceclassifier_seq_str.py --seq_model_name self_seq --feature_type seq_strc --reduced_dim_strc 28 --reduced_dim_seq 255 --result_dir_suffix _change_strc_embed`. Expected runing time: within 1 min Nvidia A100.
 3. To reproduce the results on the third party dataset:
-   - Run the evaluation through `python ./eval/lceclassifier_seq_str_bpags.py`. Expected runing time: within 1 min Nvidia A100.
+   - Run the evaluation through `python a_final_code-lceclassifier_seq_str_bench.py --seq_model_name self_seq --feature_type seq_strc --reduced_dim_strc 28 --reduced_dim_seq 255 --result_dir_suffix _change_strc_embed`. Expected runing time: within 1 min Nvidia A100.
 
 
 ### Expected output
